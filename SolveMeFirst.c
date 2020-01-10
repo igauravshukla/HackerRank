@@ -34,7 +34,7 @@ The sum of the two integers a and b is computed as: 2+3=5.
 #include <stdlib.h>
 
 int solveMeFirst(int a, int b) {
-    // Hint: Type return a+b; below
+    return a+b;
  
 }
 
@@ -46,4 +46,3 @@ int main() {
     printf("%d",sum);
     return 0;
 }
-

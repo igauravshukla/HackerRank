@@ -51,7 +51,7 @@ Sample Output 0
 
 #include<stdio.h>
 
-//Method 1 using dynamic aloocation
+//Method 1 using dynamic allocated array
 
 int* compareTriplets(int *a,int *b,int *c)
 {

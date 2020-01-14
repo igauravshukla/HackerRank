@@ -52,7 +52,7 @@ Sample Output 0
 #include<stdio.h>
 
 //Method 1 using dynamic allocated array
-
+/*
 int* compareTriplets(int *a,int *b,int *c)
 {
     int c[2]={0,0};
@@ -72,7 +72,7 @@ int main()
     printf("%d %d",p[0],p[1]);
     return 0;
 }
-
+*/
 //Method 2 using static array
 
 int* compareTriplets(int *a,int *b)

@@ -31,17 +31,18 @@ Sample Output
 
 */
 
+#include <stdint.h>
 #include <stdio.h>
-
-int32_t arr[5];
-__int32_t sum(int a,int b)
+#include <sys/types.h>
+long arr[5];
+long sum(int a,int b)
 {
-    __int32_t s=0;
+    long s=0;
     for(int i=a;i<b;i++)
         s+=arr[i];
     return s;
 }
-void miniMaxSum(int arr[])
+void miniMaxSum(long arr[])
 {
     int i,j,temp;
     for(i=0;i<4;i++)
@@ -56,12 +57,12 @@ void miniMaxSum(int arr[])
             }
         }
     }
-    printf("%d %d",sum(0,4),sum(1,5));
+    printf("%ld %ld",sum(0,4),sum(1,5));
 }
 int main()
 {
     for(int i=0;i<5;i++)
-        scanf("%d",&arr[i]);
+        scanf("%ld",&arr[i]);
     miniMaxSum(arr);
 }
 

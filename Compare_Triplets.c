@@ -73,6 +73,7 @@ int main()
     return 0;
 }
 */
+
 //Method 2 using static array
 
 int* compareTriplets(int *a,int *b)

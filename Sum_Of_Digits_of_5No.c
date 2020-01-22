@@ -28,8 +28,7 @@ int main()
     scanf("%d", &n);
     while(n>0)
     {
-        rem=n%10;
-        sum+=rem;
+        sum+=(n%10);
         n/=10;
     }
     printf("%d",sum);

@@ -31,33 +31,20 @@ Sample Output
 
 */
 
-#include <stdint.h>
 #include <stdio.h>
-#include <sys/types.h>
 long arr[5];
-long sum(int a,int b)
-{
-    long s=0;
-    for(int i=a;i<b;i++)
-        s+=arr[i];
-    return s;
-}
 void miniMaxSum(long arr[])
 {
-    int i,j,temp;
-    for(i=0;i<4;i++)
+    long min=arr[0],max=arr[0],sum=0;
+    for(int i=0;i<5;i++)
     {
-        for(j=i+1;j<=4;j++)
-        {
-            if(arr[i]>arr[j])
-            {
-                temp=arr[i];
-                arr[i]=arr[j];
-                arr[j]=temp;
-            }
-        }
+        if(arr[i]>max)
+            max=arr[i];
+        else if(arr[i]<min)
+            min=arr[i];
+        sum+=arr[i];
     }
-    printf("%ld %ld",sum(0,4),sum(1,5));
+    printf("%ld %ld",(sum-max),(sum-min));
 }
 int main()
 {
@@ -65,4 +52,5 @@ int main()
         scanf("%ld",&arr[i]);
     miniMaxSum(arr);
 }
+
 
